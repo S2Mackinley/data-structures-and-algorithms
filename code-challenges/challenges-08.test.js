@@ -7,12 +7,16 @@ Write a function named returnTen, takes in a string and uses split and splice to
 
 ------------------------------------------------------------------------------------------------ */
 
-// function returnTen(str){
-//   // Solution code here...
-// }
 function returnTen(str){
-  return str.slice(-10).split('');
+  let split = str.split('');
+  let strArray = split.length;
+  let index = strArray -10;
+  return split.splice(index);
+
 }
+// function returnTen(str){
+//   return str.slice(-10).split('');
+// }
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -27,7 +31,7 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 //   // Solution code here...
 // };
 
-const typeNum = (arr) => arr.filter(value => typeof(value) === 'number');
+const typeNum = (arr) => arr.filter(x => typeof(x) === 'number');
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -43,7 +47,7 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 // };
 
 const containsAnd = (arr) => {
-  return arr.filter(value => value.includes('and'));
+  return arr.filter(x => x.includes('and'));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -58,8 +62,9 @@ For example, oddValues([1,2,3]) returns [1,3].
 //   // Solution code here...
 // };
 
+
 const oddValues = (arr) => {
-  return arr.filter(number => number % 2 !== 0);
+  return arr.filter(x => x % 2 !== 0);
 };
 
 
@@ -78,21 +83,24 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 //   // Solution code here...
 // };
 
-function containsVowel(str) {
-  for (let index = 0; index < str.length; index++) {
-    const char = str[index];
-    if ((char === 'a') || (char === 'e') || (char === 'i') || (char === 'o') || (char === 'u')) {
-      return true;
-    }
-  }
-  return false;
-}
+// function containsVowel(str) {
+//   for (let index = 0; index < str.length; index++) {
+//     const char = str[index];
+//     if ((char === 'a') || (char === 'e') || (char === 'i') || (char === 'o') || (char === 'u')) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+
+// const filterStringsWithVowels = (arr) => {
+//   return arr.filter(str => containsVowel(str));
+// };
 
 const filterStringsWithVowels = (arr) => {
-  return arr.filter(str => containsVowel(str));
+  let regex = /[aeiou]/i
+  return arr.filter(str => regex.test(str));
 };
-
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
