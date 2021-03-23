@@ -23,11 +23,11 @@ Becomes:
 // }
 
 function transformToLis(obj){
-  let result = [];
-  for (let key in obj) {
-    result.push(`<li>${key}: ${obj[key]}</li>`);
+  let what = [];
+  for (let huh in obj) {
+    what.push(`<li>${huh}: ${obj[obj]}</li>`);
   }
-  return result;
+  return what;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -43,9 +43,9 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 
 const addValues = (arr) => {
-  return arr.reduce((acc, current) => {
-    acc += current;
-    return acc;
+  return arr.reduce((what, why) => {
+    what += why;
+    return what;
   }, 0);
 };
 /* ------------------------------------------------------------------------------------------------
