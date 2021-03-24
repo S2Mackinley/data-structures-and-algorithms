@@ -23,11 +23,11 @@ Becomes:
 // }
 
 function transformToLis(obj){
-  let what = [];
-  for (let huh in obj) {
-    what.push(`<li>${huh}: ${obj[obj]}</li>`);
+  let result = [];
+  for (let key in obj) {
+    result.push(`<li>${key}: ${obj[key]}</li>`);
   }
-  return what;
+  return result;
 }
 
 /* ------------------------------------------------------------------------------------------------
