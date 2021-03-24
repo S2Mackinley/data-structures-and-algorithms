@@ -87,9 +87,18 @@ If any element in the array is not a number, the resulting array should have the
 For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 ------------------------------------------------------------------------------------------------ */
 
+// const evenOdd = (arr) => {
+//   // Solution code here...
+// };
+
 const evenOdd = (arr) => {
-  // Solution code here...
+  return arr.map(num => {
+    if (typeof num !== 'number') return 'N/A';
+    if (num % 2 === 0) return 'even';
+    return 'odd';
+  });
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
@@ -133,8 +142,11 @@ const snorlaxAbilities = {
   weight: 4600,
 };
 
+// const extractAbilities = (arr) => {
+//   // Solution code here...
+// };
 const extractAbilities = (arr) => {
-  // Solution code here...
+  return arr.map(abilities => abilities.ability.name);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -180,8 +192,14 @@ const snorlaxStats = {
   weight: 4600,
 };
 
+// const extractStats = (arr) => {
+//   // Solution code here...
+// };
+
 const extractStats = (arr) => {
-  // Solution code here...
+  return arr.map(element => {
+    return {name: element.stat.name, total: element.effort + element.baseStat};
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -246,14 +264,14 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should return an array containing the character code for each letter', () => {
     expect(charCode(['C', 'o', 'd', 'e', '3', '0', '1'])).toStrictEqual([ 67, 111, 100, 101, 51, 48, 49 ]);
     expect(charCode(['C', 'o', 'd', 'e', '3', '0', '1']).length).toStrictEqual(7);
   });
 });
 
-xdescribe('Testing challenge 8', () => {
+describe('Testing challenge 8', () => {
   test('It should return an array containing the keys from an object', () => {
     expect(evenOdd([5, 8, 2, 6, 9, 13, 542, 541])).toStrictEqual([ 'odd', 'even', 'even', 'even', 'odd', 'odd', 'even', 'odd' ]);
     expect(evenOdd([5, 8, 2, 6, 9, 13, 542, 541]).length).toStrictEqual(8);
@@ -275,14 +293,14 @@ xdescribe('Testing challenge 8', () => {
   });
 });
 
-xdescribe('Testing challenge 9', () => {
+describe('Testing challenge 9', () => {
   test('It should return an array containing only the ability names', () => {
     expect(extractAbilities(snorlaxAbilities.abilities)).toStrictEqual(['gluttony', 'cute charm', 'immunity']);
     expect(extractAbilities(snorlaxAbilities.abilities).length).toStrictEqual(3);
   });
 });
 
-xdescribe('Testing challenge 10', () => {
+describe('Testing challenge 10', () => {
   test('It should return an array containing objects with name and total values', () => {
     expect(extractStats(snorlaxStats.stats)).toStrictEqual([
       { name: 'speed', total: 35, },
