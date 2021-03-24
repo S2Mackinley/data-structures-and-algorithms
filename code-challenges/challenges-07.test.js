@@ -87,9 +87,18 @@ If any element in the array is not a number, the resulting array should have the
 For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 ------------------------------------------------------------------------------------------------ */
 
+// const evenOdd = (arr) => {
+//   // Solution code here...
+// };
+
 const evenOdd = (arr) => {
-  // Solution code here...
+  return arr.map(num => {
+    if (typeof num !== 'number') return 'N/A';
+    if (num % 2 === 0) return 'even';
+    return 'odd';
+  });
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
@@ -133,8 +142,11 @@ const snorlaxAbilities = {
   weight: 4600,
 };
 
+// const extractAbilities = (arr) => {
+//   // Solution code here...
+// };
 const extractAbilities = (arr) => {
-  // Solution code here...
+  return arr.map(abilities => abilities.ability.name);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -180,8 +192,14 @@ const snorlaxStats = {
   weight: 4600,
 };
 
+// const extractStats = (arr) => {
+//   // Solution code here...
+// };
+
 const extractStats = (arr) => {
-  // Solution code here...
+  return arr.map(element => {
+    return {name: element.stat.name, total: element.effort + element.baseStat};
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
