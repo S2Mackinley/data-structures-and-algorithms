@@ -104,8 +104,8 @@ Write a function named checkValues that takes in an object and a value and retur
 // };
 
 const checkValues = (obj, value) => {
-  for (let keys in obj) {
-    if (obj[keys] === value) {
+  for (let magicKey in obj) {
+    if (obj[magicKey] === value) {
       return true;
     }
   }
@@ -135,12 +135,12 @@ HR has asked you to change the data to make it easier to print so that it looks 
 //   // Solution code here...
 // };
 const updateNumbers = (obj) => {
-  const results = [];
-  for (let person in obj) {
-    let personStr = `${person}: ${obj[person]}`;
-    results.push(personStr);
+  const someNumbers = [];
+  for (let weirdGuy in obj) {
+    let strings = `${weirdGuy}: ${obj[weirdGuy]}`;
+    someNumbers.push(strings);
   }
-  return results;
+  return someNumbers;
 };
 
 
@@ -157,9 +157,9 @@ Write a function named getHouses that returns a new array containing the names o
 // };
 
 const getHouses = (arr) => {
-  let houses = [];
-  arr.forEach(house => houses.push(house.house));
-  return houses;
+  let pothole = [];
+  arr.forEach(hole => pothole.push(hole.house));
+  return pothole;
 };
 
 /*------------------------------------------------------------------------------------------------
@@ -181,8 +181,8 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
   for (let i = 0; i < arr.length; i++) {
-    let vals = Object.values(arr[i]);
-    if (vals[0] === character && vals[2].length > 0) return true;
+    let coolKids = Object.values(arr[i]);
+    if (coolKids[0] === character && coolKids[2].length > 0) return true;
   }
   return false;
 };
@@ -221,13 +221,13 @@ Write a function named totalCharacters that takes in an array and returns the nu
 // };
 
 const totalCharacters = (arr) => {
-  let total = 0;
+  let totalCharacters = 0;
   arr.forEach(house => {
-    if (house.name) total++;
-    if (house.spouse) total++;
-    total += house.children.length;
+    if (house.name) totalCharacters++;
+    if (house.spouse) totalCharacters++;
+    totalCharacters += house.children.length;
   });
-  return total;
+  return totalCharacters;
 };
 
 /* ------------------------------------------------------------------------------------------------

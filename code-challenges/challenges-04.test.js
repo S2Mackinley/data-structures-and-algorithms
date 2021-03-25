@@ -10,9 +10,9 @@ Write a function called addTwo that takes in an array and adds two to every valu
 //   // Solution code here...
 // }
 const addTwo = (arr) => {
-  let result = [];
-  arr.forEach(num => result.push(num += 2));
-  return result;
+  let stuff = [];
+  arr.forEach(num => stuff.push(num += 2));
+  return stuff;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -26,8 +26,8 @@ Write a function named containsW that takes in a string. This function should us
 //   // Solution code here...
 // };
 const containsW = (str) => {
-  let regex = /[w]/;
-  return regex.test(str);
+  let regularShow = /[w]/;
+  return regularShow.test(str);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -47,8 +47,8 @@ For example:
 // };
 
 const isNum = (input) => {
-  let regex = /\d/;
-  return regex.test(input);
+  let reggieIce = /\d/;
+  return reggieIce.test(input);
 };
 
 
@@ -64,8 +64,8 @@ Write a function named containsWorld that takes in a string or number of any len
 // };
 
 const containsWorld = (input) => {
-  let regex = /\bworld\b/;
-  return regex.test(input);
+  let reggieRock = /\bworld\b/;
+  return reggieRock.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -81,8 +81,8 @@ Return an array containing all the matches.
 // };
 
 const isCapitalized = (str) => {
-  let regex = /\b[A-Z][a-z]+/g;
-  let array = str.match(regex);
+  let reggieSteel = /\b[A-Z][a-z]+/g;
+  let array = str.match(reggieSteel);
   return array || [];
 };
 
