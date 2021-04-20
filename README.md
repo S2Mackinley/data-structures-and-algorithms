@@ -1,15 +1,38 @@
-# Data Structures and Algorithms
+<h1 align="center">
 
-See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-code-challenges), in the Code 301 Setup Guide.
+<u>Table of Contents</u>
 
-## Repository Quick Tour and Usage
+Data Structures and Algorithms
 
-### 301 Code Challenges
+</h1>
+<h2>301:</h2>
 
-Under the `data-structures-and-algorithms` repository, at the top level is a folder called `code-challenges`
+[AddOne](./code-challenges/challenges-01.test.js)
 
-Each day, you'll add one new file to this folder to do your work for the day's assigned code challenge
+[](./code-challenges/challenges-02.test.js)
 
-### 401 Data Structures, Code Challenges
+[301](./code-challenges/challenges-03.test.js)
 
-- Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
+[301](./code-challenges/challenges-04.test.js)
+
+[301](./code-challenges/challenges-05.test.js)
+
+[301](./code-challenges/challenges-06.test.js)
+
+[301](./code-challenges/challenges-07.test.js)
+
+[301](./code-challenges/challenges-08.test.js)
+
+[301](./code-challenges/challenges-09.test.js)
+
+[301](./code-challenges/challenges-10.test.js)
+
+[301](./code-challenges/challenges-11.test.js)
+
+[301](./code-challenges/challenges-12.test.js)
+
+[301](./code-challenges/challenges-13.test.js)
+
+<h2>401:</h2>
+
+[Array-Shift](./javascript/codechallenges/arrayShift)
