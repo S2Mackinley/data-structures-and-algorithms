@@ -13,3 +13,4 @@ at first I used split to get it to work. However this wasnt allowed. So instead 
 ## Solution
 
 ![arrayShift](arrayShift.jpeg)
+![WRRC](wrrc.png)
