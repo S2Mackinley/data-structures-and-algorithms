@@ -35,4 +35,6 @@ Data Structures and Algorithms
 
 <h2>401:</h2>
 
+[Reverse-11](./javascript/codechallenges/arrayShift)
 [Array-Shift](./javascript/codechallenges/arrayShift)
+[Array-Binary-Search](./javascript/codechallenges/arrayShift)
