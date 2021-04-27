@@ -1,80 +1,51 @@
+"use strict";
 
-'use strict';
+const LinkedList = require("../lib/linkedlist.js");
 
-const LL = require('../lib/linkedlist.js');
-
-describe('Linked List', () => {
-  it('should successfully instantiate an empty linked list', () => {
-    let list = new LL();
+describe("Linked List", () => {
+  it("Can successfully instantiate an empty linked list", () => {
+    let list = new LinkedList();
     expect(list.head).toEqual(null);
   });
 
-  it('should properly insert into the linked list', () => {
-    let list = new LL();
-    let first = 1;
-    let second = 2;
+  it("Can successfully add a node at the head", () => {
+    const ll = new LinkedList();
+    ll.insert('20');
+    expect(ll.head.value).toEqual('20');
+    expect(ll.head.next).toBeNull();
 
-    list.insert(first);
-    expect(list.head.value).toEqual(1);
-
-    list.insert(second);
-    list.insert(3);
-    list.insert(4);
-
-    console.log(list);
   });
 
-  it('should show head points to first node in list', () => {
-    let list = new LL(); // starts new linked list
-    let first = 1; // sets variable value to 1
-    let second = 2; // sets variable value to 2
-    list.insert(first); // creates first node, sets value to variable 'first'
-    list.insert(second); // creates second node, sets value to variable 'first'
-
-    expect(list.head.value).toEqual(1); // tests value of head node
+  it("Can successfully add multiple nodes to the end of a linked list", () => {
+    const ll = new LinkedList();
+    ll.insert("1");
+    ll.insert('2');
+    expect(ll.head.value).toEqual('2');
+    expect(ll.head.next).toEqual({next: null, value: "1"});
   });
 
-  it('should show properly inserting multiple nodes into the linked list', () => {
-    let list = new LL();
-    let first = 1;
-    let second = 2;
-    let third = 3;
-    list.insert(first);
-    list.insert(second);
-    list.insert(third);
-
-    expect(list.head.value).toEqual(1);
-    expect(list.head.next.value).toEqual(2);
-    expect(list.head.next.next.value).toEqual(3);
+  it("Can successfully insert a node before a node located in the middle of a linked list", () => {
+    const ll = new LinkedList();
+    ll.append('1');
+    ll.append('2');
+    ll.append('3');
+    ll.append('4');
+    ll.append('5');
+    ll.insertBefore('3', '17');
+    let expected =
+      "{1} -> {2} -> {17} -> {3} -> {4} -> {5} -> NULL";
+    expect(ll.toString()).toEqual(expected);
   });
 
-  it('will return true when finding a value that exists in the linked list', () => {
-    let list = new LL();
-    let first = 1;
-    let second = 2;
-    list.insert(first);
-    list.insert(second);
-    expect(list.includes(2)).toBe(true);
+  xit("Can successfully insert a node before the first node of a linked list", () => {
+
   });
 
-  it('will return false when searching for non existing node value', () => {
-    let list = new LL();
-    let first = 1;
-    let second = 2;
-    list.insert(first);
-    list.insert(second);
-    expect(list.includes(3)).toBe(false);
-  });
+  // it("Can successfully insert after a node in the middle of the linked list", () => {
 
-  it('can properly return a collection of all the values in linked list', () => {
-    let list = new LL();
-    let first = 1;
-    let second = 2;
-    let third = 3;
-    list.insert(first);
-    list.insert(second);
-    list.insert(third);
-    expect(list.toString()).toEqual('{ 1 } -> { 2 } -> { 3 } -> NULL');
-  });
+  // });
+  // it("Can successfully insert a node after the last node of the linked list", () => {
+
+  // });
 
 });
