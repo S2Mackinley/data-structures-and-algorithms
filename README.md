@@ -4,13 +4,15 @@
 
 <h1 align="center">
 
-<u>Table of Contents</u>
+Table of Contents
 
+</h1>
+<h1 align="center">
 Data Structures and Algorithms
 
 401
+</h1>
 
----
 
 [Reverse](./javascript/codechallenges/arrayShift)
 
