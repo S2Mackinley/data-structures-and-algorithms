@@ -12,7 +12,7 @@ Data Structures and Algorithms
 
 <h2 align="center">401</h2>
 
-[Reverse-11](./javascript/codechallenges/arrayShift)
+[Reverse](./javascript/codechallenges/arrayShift)
 
 [Array-Shift](./javascript/codechallenges/arrayShift)
 
@@ -21,3 +21,7 @@ Data Structures and Algorithms
 [Linked Lists](./javascript/linked-list)
 
 [Linked Lists Zip](./javascript/llZip)
+
+[Stacks and queue](./javascript/stacks)
+
+[Stacks with Queues](./javascript/with?)
