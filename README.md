@@ -8,11 +8,7 @@
 
 Data Structures and Algorithms
 
-</h1>
-
-<h2 align="center">
-  401
-</h2>
+401
 
 ---
 
