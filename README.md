@@ -1,3 +1,7 @@
+# ![cf](https://i.imgur.com/7v5ASc8.png) Lab 09: Auth-Module
+
+![example workflow](https://github.com/S2Mackinley/data-structures-and-algorithms/actions/workflows/javascript-tests.yml/badge.svg)
+
 <h1 align="center">
 
 <u>Table of Contents</u>
@@ -5,35 +9,8 @@
 Data Structures and Algorithms
 
 </h1>
-<h2>301:</h2>
 
-[AddOne](./code-challenges/challenges-01.test.js)
-
-[](./code-challenges/challenges-02.test.js)
-
-[301](./code-challenges/challenges-03.test.js)
-
-[301](./code-challenges/challenges-04.test.js)
-
-[301](./code-challenges/challenges-05.test.js)
-
-[301](./code-challenges/challenges-06.test.js)
-
-[301](./code-challenges/challenges-07.test.js)
-
-[301](./code-challenges/challenges-08.test.js)
-
-[301](./code-challenges/challenges-09.test.js)
-
-[301](./code-challenges/challenges-10.test.js)
-
-[301](./code-challenges/challenges-11.test.js)
-
-[301](./code-challenges/challenges-12.test.js)
-
-[301](./code-challenges/challenges-13.test.js)
-
-<h2>401:</h2>
+<h2 align="center">401</h2>
 
 [Reverse-11](./javascript/codechallenges/arrayShift)
 

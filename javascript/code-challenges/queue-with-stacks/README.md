@@ -14,4 +14,5 @@ Create a class for a PseudoQueue that uses 2 stacks and their methods to define 
 * Before enqueue or dequeue all items have to be shifted from stack to another to access the right nodes
 
 ## Solution
-<!-- Embedded whiteboard image -->
+
+![idk](queuewithstack.png)

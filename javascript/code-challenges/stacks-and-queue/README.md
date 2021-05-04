@@ -34,6 +34,3 @@ Calling dequeue or peek on empty queue raises exception
 
 
 ## Approach & Efficiency
-
-
-## API

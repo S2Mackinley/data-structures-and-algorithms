@@ -1,11 +1,59 @@
-// "use strict";
+const binarySearch = require('../array-binary-search.js');
 
-// const arrBinarySearch = require("../array-binary-search");
+describe('Testing binarySearch function', () => {
 
-// xdescribe("***ARRAY BINARY SEARCH***", () => {
-//   it('should return the index of the array element equal to the search key or -1 if the element does not exist', () => {
-//     expect(arrBinarySearch([4, 8, 15, 16, 23, 42], 15)).toStrictEqual(2);
-//     expect(arrBinarySearch([11, 22, 33, 44, 55, 66, 77], 90)).toStrictEqual(-1);
-//     expect(arrBinarySearch([1, 2, 3, 5, 6, 7], 4)).toStrictEqual(-1);
-//   });
-// });
+  test('When a key match is found in array with even amount of indexs', () => {
+    const testSArr = [1,2,3,4];
+    const testTarget = 3;
+    const result = binarySearch(testSArr, testTarget);
+    const expected = 2;
+
+    expect(result).toEqual(expected);
+  });
+
+  test('When a key match is found in array with odd amount of indexs', () => {
+    const testSArr = [1,2,3,4,5];
+    const testTarget = 3;
+    const result = binarySearch(testSArr, testTarget);
+    const expected = 2;
+
+    expect(result).toEqual(expected);
+  });
+
+  test('Failure - when key is Not found', () => {
+    const testSArr = [1,2,3,4];
+    const testTarget = 7;
+    const result = binarySearch(testSArr, testTarget);
+    const expected = -1;
+
+    expect(result).toEqual(expected);
+  });
+
+  test('Long array, making sure it will travel either direction in the array when checking', () => {
+    const testSArr = [1,2,3,4,5,6,7,8,9,10];
+    const testTarget = 8;
+    const result = binarySearch(testSArr, testTarget);
+    const expected = 7;
+
+    expect(result).toEqual(expected);
+  });
+
+  test('If target is first element it will not go out of bounds', () => {
+    const testSArr = [1,2,3,4,5];
+    const testTarget = 1;
+    const result = binarySearch(testSArr, testTarget);
+    const expected = 0;
+
+    expect(result).toEqual(expected);
+  });
+
+  test('If array is empty defaults to return -1', () => {
+    const testSArr = [];
+    const testTarget = 5;
+    const result = binarySearch(testSArr, testTarget);
+    const expected = -1;
+
+    expect(result).toEqual(expected);
+  });
+
+});

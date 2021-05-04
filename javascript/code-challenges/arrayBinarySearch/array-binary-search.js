@@ -1,20 +1,21 @@
-"use strict";
+'use strict';
 
-function binarySearch(arr, num) {
-  let min = 0;
-  let max = arr.length - 1;
-  while (min + 1 !== max) {
-    let mid = Math.ceil((min + max) / 2);
-    if (arr[mid] === num) {
+function binarySearch(sArr, target) {
+  let low = 0;
+  let high = sArr.length - 1;
+
+  while(low <= high){
+    let mid = Math.ceil((low + high) / 2);
+
+    if(sArr[mid] === target){
       return mid;
-    }
-    if (arr[mid] < num) {
-      min = mid;
-    }
-    if (arr[mid] > num) {
-      max = mid;
+    } else if(sArr[mid] > target){
+      high = mid - 1;
+    } else if(sArr[mid] < target){
+      low = mid + 1;
     }
   }
+
   return -1;
 }
 

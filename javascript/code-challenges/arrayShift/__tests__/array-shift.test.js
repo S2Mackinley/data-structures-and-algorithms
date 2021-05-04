@@ -1,10 +1,31 @@
-// "use strict";
+const insertShiftArray = require('../array-shift.js');
 
-// const { insertShiftArray } = require('../array-shift');
+describe('Testing insertShiftArray function', () => {
 
-// xdescribe("***Array Shift***", () => {
-//   test("It should return an array with the given number inserted into the middle", () => {
-//     expect(insertShiftArray([2, 4, 6, 8], 5)).toStrictEqual([2, 4, 5, 6, 8]);
-//     expect(insertShiftArray([4,8,15,23,42], 16)).toStrictEqual([4,8,15,16,23,42]);
-//   });
-// });
+  test('When given an array length of 4(even), val is inserted at index 2 of new array', () => {
+    const testArr = [1,2,3,4];
+    const testVal = 5;
+    const expectedOutput = [1,2,5,3,4];
+    const actualOutput = insertShiftArray(testArr, testVal);
+
+    expect(actualOutput).toEqual(expectedOutput);
+  });
+
+  test('When given an array length of 5(odd), val is inserted at index 3 of new array', () => {
+    const testArr = [1,2,3,4,5];
+    const testVal = 6;
+    const expectedOutput = [1,2,3,6,4,5];
+    const actualOutput = insertShiftArray(testArr, testVal);
+
+    expect(actualOutput).toEqual(expectedOutput);
+  });
+
+  test('Expected failure test - undefined array', () => {
+    const testVal = 6;
+
+    expect(() => {
+      insertShiftArray(undefined, testVal);
+    }).toThrow('Cannot read property \'length\' of undefined');
+  });
+
+});

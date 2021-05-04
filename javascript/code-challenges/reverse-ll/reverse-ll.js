@@ -1,16 +1,14 @@
 'use strict';
 
-// Require the linked list implementation
-const LinkedList = require('../../linked-list');
+function reverseArray (a) {
+  let b = [], counter = 0;
 
-
-/*
-  Accept a linked list
-  Reveres it
-  Return it
-*/
-module.exports = function reverse(list) {
-
-  return true;
-
+  for (let i = a.length - 1; i >= 0; i--) {
+    b[counter] = a[i];
+    counter += 1;
+  }
+  console.log(b);
+  return b;
 }
+
+module.exports = reverseArray;
