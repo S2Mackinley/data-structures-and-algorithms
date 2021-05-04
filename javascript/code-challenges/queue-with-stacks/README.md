@@ -1,6 +1,7 @@
 # ![cf](https://i.imgur.com/7v5ASc8.png) Implement a PseudoQueue with 2 stacks
 ![example workflow](https://github.com/S2Mackinley/data-structures-and-algorithms/tree/main/javascript/code-challenges/queue-with-stacks/actions/workflows/javascript-tests.yml/badge.svg)
 
+
 # Challenge Summary
 
 Create a class for a PseudoQueue that uses 2 stacks and their methods to define the enqueue and dequeue methods of the new class
