@@ -12,7 +12,8 @@ Data Structures and Algorithms
 
 <h2 align="center">
   401
-  <br>
+  </br
+  </br
 </h2>
 
 [Reverse](./javascript/codechallenges/arrayShift)
