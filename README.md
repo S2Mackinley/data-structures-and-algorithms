@@ -1,15 +1,23 @@
-# Data Structures and Algorithms
+# ![cf](https://i.imgur.com/7v5ASc8.png) Lab 09: Auth-Module
 
-See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-code-challenges), in the Code 301 Setup Guide.
+![example workflow](https://github.com/S2Mackinley/data-structures-and-algorithms/actions/workflows/javascript-tests.yml/badge.svg)
 
-## Repository Quick Tour and Usage
+<h1 align="center">
 
-### 301 Code Challenges
+<u>Table of Contents</u>
 
-Under the `data-structures-and-algorithms` repository, at the top level is a folder called `code-challenges`
+Data Structures and Algorithms
 
-Each day, you'll add one new file to this folder to do your work for the day's assigned code challenge
+</h1>
 
-### 401 Data Structures, Code Challenges
+<h2 align="center">401</h2>
 
-- Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
+[Reverse-11](./javascript/codechallenges/arrayShift)
+
+[Array-Shift](./javascript/codechallenges/arrayShift)
+
+[Array-Binary-Search](./javascript/codechallenges/arrayShift)
+
+[Linked Lists](./javascript/linked-list)
+
+[Linked Lists Zip](./javascript/llZip)
