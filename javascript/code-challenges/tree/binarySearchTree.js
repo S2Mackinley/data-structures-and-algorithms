@@ -98,7 +98,6 @@ class BinarySearchTree {
     return max;
   }
 
-
 }
 
 module.exports = BinarySearchTree;
