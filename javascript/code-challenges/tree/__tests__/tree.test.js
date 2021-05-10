@@ -60,12 +60,12 @@ describe('binary search tree', () => {
 
   it('should return false on .contains() if value does not exist in BST', () => {
     let tree = new BinarySearchTree();
-    tree.add(6);
-    tree.add(3);
-    tree.add(19);
     tree.add(1);
-    tree.add(17);
-    expect(tree.contains(14)).toEqual(false);
+    tree.add(3);
+    tree.add(5);
+    tree.add(7);
+    tree.add(9);
+    expect(tree.contains(10)).toEqual(false);
   });
   it('should return 11 as the max number', () => {
     let tree = new BinarySearchTree();
@@ -78,7 +78,6 @@ describe('binary search tree', () => {
     tree.add(2);
     tree.add(5);
     tree.add(11);
-    tree.add(10);
     expect(tree.findMaxValue()).toEqual(11);
   });
 

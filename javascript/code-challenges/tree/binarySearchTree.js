@@ -43,18 +43,18 @@ class BinarySearchTree {
   add(value) {
     let node = new Node(value);
 
-    let _addValue = (currentNode, node) => {
-      if(node.value < currentNode.value){
-        if(!currentNode.left){
-          currentNode.left = node;
+    let _addValue = (current, node) => {
+      if(node.value < current.value){
+        if(!current.left){
+          current.left = node;
         } else {
-          _addValue(currentNode.left, node);
+          _addValue(current.left, node);
         }
       } else {
-        if(!currentNode.right){
-          currentNode.right = node;
+        if(!current.right){
+          current.right = node;
         } else {
-          _addValue(currentNode.right, node);
+          _addValue(current.right, node);
         }
       }
     };
@@ -70,15 +70,15 @@ class BinarySearchTree {
   contains(value) {
     if(!this.root.value) return false;
 
-    let _search = (currentNode, value) => {
-      if(currentNode.value === value){
+    let _search = (current, value) => {
+      if(current.value === value){
         return true;
-      } else if(currentNode.value > value) {
-        if(!currentNode.left) return false;
-        return _search(currentNode.left, value);
+      } else if(current.value > value) {
+        if(!current.left) return false;
+        return _search(current.left, value);
       } else {
-        if(!currentNode.right) return false;
-        return _search(currentNode.right, value);
+        if(!current.right) return false;
+        return _search(current.right, value);
       }
     };
 
