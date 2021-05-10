@@ -10,40 +10,40 @@ describe('binary search tree', () => {
 
   it('Can successfully instantiate a tree with a single root node', () => {
     let tree = new BinarySearchTree();
-    tree.add(7);
-    expect(tree.root.value).toEqual(7);
-    expect(tree.contains(7)).toEqual(true);
+    tree.add(6);
+    expect(tree.root.value).toEqual(6);
+    expect(tree.contains(6)).toEqual(true);
   });
 
   it('Can successfully add a left child and right child to a single root node', () => {
     let tree = new BinarySearchTree();
-    tree.add(7);
+    tree.add(10);
     tree.add(1);
-    tree.add(9);
-    expect(tree.root.value).toEqual(7);
+    tree.add(11);
+    expect(tree.root.value).toEqual(10);
     expect(tree.root.left.value).toEqual(1);
-    expect(tree.root.right.value).toEqual(9);
+    expect(tree.root.right.value).toEqual(11);
   });
 
   it('can successfully return a collection from a preorder traversal', () => {
-    let expected = [6, 3, 1, 19, 17];
+    let expected = [1, 3, 5, 7, 9];
     let tree = new BinarySearchTree();
-    tree.add(6);
-    tree.add(3);
-    tree.add(19);
     tree.add(1);
-    tree.add(17);
+    tree.add(3);
+    tree.add(5);
+    tree.add(7);
+    tree.add(9);
     expect(tree.preOrder()).toEqual(expected);
   });
 
   it('can successfully return a collection from an inorder traversal', () => {
-    let expected = [ 1, 3, 6, 17, 19 ];
+    let expected = [ 1, 3, 5, 7, 9 ];
     let tree = new BinarySearchTree();
-    tree.add(6);
-    tree.add(3);
-    tree.add(19);
     tree.add(1);
-    tree.add(17);
+    tree.add(3);
+    tree.add(5);
+    tree.add(7);
+    tree.add(9);
     expect(tree.inOrder()).toEqual(expected);
   });
 
@@ -66,6 +66,20 @@ describe('binary search tree', () => {
     tree.add(1);
     tree.add(17);
     expect(tree.contains(14)).toEqual(false);
+  });
+  it('should return 11 as the max number', () => {
+    let tree = new BinarySearchTree();
+    tree.add(2);
+    tree.add(5);
+    tree.add(9);
+    tree.add(4);
+    tree.add(7);
+    tree.add(6);
+    tree.add(2);
+    tree.add(5);
+    tree.add(11);
+    tree.add(10);
+    expect(tree.findMaxValue()).toEqual(11);
   });
 
 });
