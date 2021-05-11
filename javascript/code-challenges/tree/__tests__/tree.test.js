@@ -37,25 +37,33 @@ describe('binary search tree', () => {
   });
 
   it('can successfully return a collection from an inorder traversal', () => {
-    let expected = [ 1, 3, 5, 7, 9 ];
     let tree = new BinarySearchTree();
-    tree.add(1);
-    tree.add(3);
-    tree.add(5);
+    tree.add(8);
+    tree.add(2);
     tree.add(7);
+    tree.add(4);
+    tree.add(6);
+    tree.add(5);
+    tree.add(3);
+    tree.add(1);
     tree.add(9);
-    expect(tree.inOrder()).toEqual(expected);
+    let results = tree.inOrder();
+    expect(results).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
   });
 
   it('can successfully return a collection from a postorder traversal', () => {
-    let expected = [ 1, 3, 17, 19, 6 ];
     let tree = new BinarySearchTree();
+    tree.add(8);
+    tree.add(2);
+    tree.add(7);
+    tree.add(4);
     tree.add(6);
+    tree.add(5);
     tree.add(3);
-    tree.add(19);
     tree.add(1);
-    tree.add(17);
-    expect(tree.postOrder()).toEqual(expected);
+    tree.add(9);
+    let results = tree.postOrder();
+    expect(results[results.length-1]).toEqual(8);
   });
 
   it('should return false on .contains() if value does not exist in BST', () => {
@@ -79,6 +87,21 @@ describe('binary search tree', () => {
     tree.add(5);
     tree.add(11);
     expect(tree.findMaxValue()).toEqual(11);
+  });
+
+  it ('using a breadth-first traversal', () => {
+    let tree = new BinarySearchTree();
+    tree.add(8);
+    tree.add(2);
+    tree.add(7);
+    tree.add(4);
+    tree.add(6);
+    tree.add(5);
+    tree.add(3);
+    tree.add(1);
+    tree.add(9);
+    let results = tree.breadthFirst();
+    expect(results).toEqual([8, 2, 9, 1, 7, 4, 3, 6, 5]);
   });
 
 });
