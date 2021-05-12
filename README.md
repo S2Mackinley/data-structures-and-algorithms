@@ -29,3 +29,4 @@ Data Structures and Algorithms
 [Stacks with Queues](./javascript/with?)
 
 [Animal Shelter](./javascript/with?)
+[Fizz Buzz](javascript/codechallenges/idk)
